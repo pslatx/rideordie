@@ -294,3 +294,165 @@ li {
 .switch.is-es::after {
   transform: translateX(20px);
 }
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablets and small laptops */
+@media (max-width: 900px) {
+
+	.head,
+	.head2 {
+		width: 80%;
+	}
+
+	.head2 {
+		margin-top: -60px;
+	}
+
+	.bus {
+		width: 35%;
+	}
+
+	.footer {
+		width: 85%;
+	}
+
+	.first,
+	.second {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	.section1 {
+		font-size: 36px;
+	}
+
+	.section2white,
+	.section2blue {
+		font-size: 30px;
+	}
+
+	p,
+	li {
+		font-size: 22px;
+	}
+}
+
+/* Phones */
+@media (max-width: 600px) {
+
+	.head,
+	.head2 {
+		width: 92%;
+	}
+
+	.head2 {
+		margin-top: -40px;
+	}
+
+	.bus {
+		width: 45%;
+	}
+
+	.footer {
+		width: 95%;
+	}
+
+	.first,
+	.second {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.first {
+		padding-top: 15px;
+		padding-bottom: 25px;
+	}
+
+	.second {
+		padding-top: 5px;
+		padding-bottom: 25px;
+	}
+
+	.section1 {
+		font-size: 28px;
+		line-height: 1.25;
+	}
+
+	.section2white,
+	.section2blue {
+		font-size: 24px;
+		line-height: 1.3;
+	}
+
+	p,
+	li {
+		font-size: 18px;
+		padding-top: 20px;
+	}
+
+	ol {
+		margin-top: -10px;
+		padding-left: 20px;
+	}
+
+	.lang-toggle-wrap {
+		margin-bottom: 20px;
+		justify-content: center;
+	}
+
+	/* Tame the bounce/slide animations so content isn't flying in
+	   from far off-screen on narrow viewports */
+	@-webkit-keyframes bounce-in-left {
+		0% { -webkit-transform: translateX(-150px); transform: translateX(-150px); opacity: 0; }
+		38% { -webkit-transform: translateX(0); transform: translateX(0); opacity: 1; }
+		55% { -webkit-transform: translateX(-20px); transform: translateX(-20px); }
+		72% { -webkit-transform: translateX(0); transform: translateX(0); }
+		81% { -webkit-transform: translateX(-8px); transform: translateX(-8px); }
+		90% { -webkit-transform: translateX(0); transform: translateX(0); }
+		100% { -webkit-transform: translateX(0); transform: translateX(0); }
+	}
+	@keyframes bounce-in-left {
+		0% { transform: translateX(-150px); opacity: 0; }
+		38% { transform: translateX(0); opacity: 1; }
+		55% { transform: translateX(-20px); }
+		72% { transform: translateX(0); }
+		81% { transform: translateX(-8px); }
+		90% { transform: translateX(0); }
+		100% { transform: translateX(0); }
+	}
+
+	@-webkit-keyframes slide-in-fwd-left {
+		0% { -webkit-transform: translateZ(-400px) translateX(-250px); transform: translateZ(-400px) translateX(-250px); opacity: 0; }
+		100% { -webkit-transform: translateZ(0) translateX(0); transform: translateZ(0) translateX(0); opacity: 1; }
+	}
+	@keyframes slide-in-fwd-left {
+		0% { transform: translateZ(-400px) translateX(-250px); opacity: 0; }
+		100% { transform: translateZ(0) translateX(0); opacity: 1; }
+	}
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+
+	.section1 {
+		font-size: 23px;
+	}
+
+	.section2white,
+	.section2blue {
+		font-size: 20px;
+	}
+
+	p,
+	li {
+		font-size: 16px;
+	}
+
+	.lang-label {
+		font-size: 12px;
+		padding: 5px 8px;
+	}
+}
