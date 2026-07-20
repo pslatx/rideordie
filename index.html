@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+	<title>Ride or Die ATX</title>
+	    <link rel="stylesheet" href="style.css">
+	    <link rel="icon" type="image/x-icon" href="/icon.png">
+</head>
+<body>
+
+<!--Header-->
+	<img class="head slide-in-fwd-left" src="We Are Ride Or Die.png">
+	<img class="bus bounce-in-left" src="bus.png">
+	<img class="head2 slide-in-fwd-left2" src="For Our Bus Drivers.png">
+
+<!--Section 1-->
+	<div class="first bounce-in-left">
+	  <!-- LANGUAGE TOGGLE -->
+  <div class="lang-toggle-wrap">
+    <div class="lang-toggle" id="langToggle">
+      <span class="lang-label active" data-lang="en">EN</span>
+      <div class="switch" id="switchEl"></div>
+      <span class="lang-label" data-lang="es">ES</span>
+    </div>
+  </div>
+
+		<h1 class="section1" data-en="99.5% OF TRANSIT UNION WORKERS AUTHORIZE STRIKE" 
+		data-es="99.5% DE LOS TRABAJADORES DEL SINDICATO DE TRANSPORTE AUTORIZAN UNA HUELGA">99.5% OF TRANSIT UNION WORKERS AUTHORIZE STRIKE</h1>
+		<h2 class="section2white"
+			data-en="WHAT IS HAPPENING?"
+			data-es="¿QUE ESTÁ SUCEDIENDO?"
+		>WHAT IS HAPPENING?</h2>
+			<p data-en="Keolis, a French multinational company that is known to be anti-union, was awarded a contract by the CapMetro Board to run buses beginning in 2024 despite Union opposition"
+				data-es="A pesar de la oposición sindical, la junta directiva de CapMetro adjudicó a Keolis un contrato para operar los autobuses a partir de 2024. 
+Keolis es una compañia multinacional Francesa conocida por sus prácticas antisindicales.">
+				Keolis, a French multinational company that is known to be anti-union, was awarded a contract by the CapMetro Board to run buses beginning in 2024 despite Union opposition. </p>
+				<p data-en="After months of unfruitful negotiations with Keolis, Amalgamated Transit Union Local 1091 (ATU 1091) has voted to go on strike if conditions are not met."
+				data-es="Tras meses de negociaciones con Keolis, el sindicato Amalgamated Transit Union Local 1091 (ATU 1091) ha votado a favor de ir a huelga si no se cumplen las condiciones.">
+				After months of unfruitful negotiations with Keolis, Amalgamated Transit Union Local 1091 (ATU 1091) has voted to go on strike if conditions are not met.</p>
+				<h2 class="section2white"
+				data-en="A strike would shut down virtually all public bus service citywide."
+				data-es="Una huelga paralizaría prácticamente todo el servicio de autobuses públicos en la ciudad."
+				>A strike would shut down virtually <b>all public bus service citywide</b>.</h2>
+	</div>
+	
+<!--Section 2-->
+	<div class="second bounce-in-left">
+		<h2 class="section2blue"
+		data-en="WHAT IS ATU 1091 ASKING FOR?"
+		data-es="¿QUÉ ESTÁ PIDIENDO LOS TRABAJADORES DE ATU 1091?"
+		>WHAT IS ATU 1091 ASKING FOR?</h2>
+			<ol>
+				<li
+				data-en="Drivers, mechanics and support staff are asking for an increase in wages and retirement. Many cannot afford to live in the city they serve."
+				data-es="Conductores, mecánicos y personal de apoyo solicitan un aumento salarial y mejores condiciones de jubilación. Muchos no pueden vivir en la ciudad donde trabajan."
+				>Drivers, mechanics and support staff are asking for an increase in wages and retirement. <br>Many cannot afford to live in the city they serve.</li>
+				<li
+				data-en="Shortening of split shifts, so drivers aren’t away from home for 13 hours and only paid 8."
+				data-es="Reducción de la duración de los turnos partidos, para que los conductores no estén fuera de su casa durante 13 horas y solo cobren 8."
+				>Shortening of split shifts, so drivers aren’t away from home for 13 hours and only paid 8.</li>
+				<li
+				data-en="Tool and equipment allowances for mechanics so they can keep our buses safe and running."
+				data-es="Subsidios para herramientas y equipos destinados a los mecánicos, para que puedan mantener nuestros autobuses seguros y funcionando."
+				>Tool and equipment allowances for mechanics so they can keep our buses safe and running. </li>
+				<li
+				data-en="Give UT shuttle bus drivers full benefits. They are currently not getting sick pay and other benefits even when working full time!"
+				data-es="Otorguen a los conductores de autobuses de la Universidad de Texas todos los beneficios de un trabajador de tiempo completo. ¡Actualmente no reciben baja por enfermedad ni otros beneficios, incluso trabajando las 40 horas semanales!
+"
+				>Give UT shuttle bus drivers full benefits. <br>They are currently not getting sick pay and other benefits even when working full time!</li>
+			</ol>
+	</div>
+
+<!--Ending Section-->
+	<img  class="footer bounce-in-left" data-en-src="Move the bus.png" data-es-src="esp.png" src="Move the bus.png">
+
+
+<script>
+(function () {
+  const toggle = document.getElementById('langToggle');
+  const switchEl = document.getElementById('switchEl');
+  const labels = toggle.querySelectorAll('.lang-label');
+  const translatable = document.querySelectorAll('[data-en]');
+ 
+  // Remember choice across page loads
+  let currentLang = localStorage.getItem('siteLang') || 'en';
+ 
+ 
+const translatableImgs = document.querySelectorAll('[data-en-src]');
+
+function applyLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('siteLang', lang);
+
+  // Swap text content
+  translatable.forEach(el => {
+    const text = el.getAttribute('data-' + lang);
+    if (text !== null) el.textContent = text;
+  });
+
+  // Swap image sources
+  translatableImgs.forEach(img => {
+    const src = img.getAttribute('data-' + lang + '-src');
+    if (src !== null) img.src = src;
+  });
+
+  // Update <html lang="">
+  document.documentElement.lang = lang;
+
+  // Update toggle UI
+  labels.forEach(l => l.classList.toggle('active', l.dataset.lang === lang));
+  switchEl.classList.toggle('is-es', lang === 'es');
+}
+  // Click either label, or the switch itself
+  labels.forEach(label => {
+    label.addEventListener('click', () => applyLang(label.dataset.lang));
+  });
+  switchEl.addEventListener('click', () => {
+    applyLang(currentLang === 'en' ? 'es' : 'en');
+  });
+ 
+  applyLang(currentLang);
+})();
+
+</script>
