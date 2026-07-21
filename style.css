@@ -426,6 +426,9 @@ li {
 	.head2 {
 		width: 92%;
 	}
+	.disclaimer {
+		font-size:14px;
+	}
 
 	.head2 {
 		margin-top: -40px;
@@ -446,18 +449,18 @@ li {
 	}
 
 	.first {
-		padding-top: 15px;
-		padding-bottom: 25px;
+		padding-top: 10px;
+		padding-bottom: 20px;
 	}
 
 	.second {
 		padding-top: 5px;
-		padding-bottom: 25px;
+		padding-bottom: 20px;
 	}
 
 	.section1 {
 		font-size: 28px;
-		line-height: 1.25;
+		line-height: 1.0;
 	}
 
 	.section2white,
@@ -469,7 +472,7 @@ li {
 	p,
 	li {
 		font-size: 18px;
-		padding-top: 20px;
+		padding-top: 15px;
 	}
 
 	ol {
@@ -532,5 +535,8 @@ li {
 	.lang-label {
 		font-size: 12px;
 		padding: 5px 8px;
+	}
+	.disclaimer {
+		font-size:12px;
 	}
 }
