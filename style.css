@@ -120,6 +120,10 @@
 
 }
 
+a:hover {
+	color:black;
+}
+
 .section1 {
 	font-family: Oswald;
 	font-size: 48px;
