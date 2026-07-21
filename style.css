@@ -340,6 +340,10 @@ li {
   'opsz' 48,
 }
 
+#email {
+	margin-left:20px;
+}
+
 /* From Uiverse.io by cssbuttons-io */ 
 .button {
   display: inline-block;
@@ -473,6 +477,9 @@ li {
 		width: 95%;
 	}
 
+#email {
+	margin-left:20px;
+}
 	.first,
 	.second {
 		padding-left: 20px;
